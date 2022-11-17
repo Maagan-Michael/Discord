@@ -6,7 +6,6 @@ import random
 import music
 
 TOKEN = getenv("TOKEN")
-TOKEN = "MTA0MjM2ODc3Njk2NTk4ODM3Mg.GYxGGm.WkB2fupv32OyX-SzB7N082mLEkpU1QUHGpi4cs"
 
 intents = discord.Intents.all()
 intents.dm_messages = True
