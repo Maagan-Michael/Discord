@@ -1,6 +1,8 @@
 from os import getenv
 import discord
+from discord.ext import commands
 import random
+import music
 
 TOKEN = getenv("TOKEN")
 
@@ -12,7 +14,13 @@ intents.members = True
 intents.messages = True
 
 
+# cogs = [music]
+
 client = discord.Client(intents=intents)
+
+
+# for i in range(len(cogs)):
+    # cogs[i].setup(client)
 
 
 @client.event
