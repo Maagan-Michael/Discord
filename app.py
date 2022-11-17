@@ -50,6 +50,14 @@ async def arrow(ctx):
     await ctx.send(response)
 
 
+@bot.command(name="rand_name")
+async def arrow(ctx):
+    ls = ["Itay", "Nevo", "Yonatan K.", "Yuval" ,"Bonti", "kami"]
+    response = random.choice(ls)
+    await ctx.send(response)
+
+
+
 @bot.event
 async def on_message(message):
     username = message.author.mention
