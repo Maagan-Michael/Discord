@@ -6,6 +6,7 @@ import random
 import music
 
 TOKEN = getenv("TOKEN")
+TOKEN = "MTA0MjM2ODc3Njk2NTk4ODM3Mg.GYxGGm.WkB2fupv32OyX-SzB7N082mLEkpU1QUHGpi4cs"
 
 intents = discord.Intents.all()
 intents.dm_messages = True
@@ -34,11 +35,10 @@ async def on_ready():
 async def arrow(ctx, size):
     response = ""
     for i in range(int(size)):
-        response = response + (">" * i + "\n")
+        response = response + ("?" * i + "\n")
 
     for i in  range(int(size), 0, -1):
-        response = response + (">" * i + "\n")
-
+        response = response + ("?" * i + "\n")
 
     await ctx.send(response)
 
