@@ -1,5 +1,6 @@
 from os import getenv
 import discord
+
 import random
 
 TOKEN = getenv("TOKEN")
