@@ -34,10 +34,11 @@ async def on_ready():
 async def arrow(ctx, size):
     response = ""
     for i in range(int(size)):
-        response = response + ("?" * i + "\n")
+        response = response + (">" * i + "\n")
 
     for i in  range(int(size), 0, -1):
-        response = response + ("?" * i + "\n")
+        response = response + (">" * i + "\n")
+
 
     await ctx.send(response)
 
