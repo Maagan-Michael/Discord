@@ -43,6 +43,17 @@ async def arrow(ctx, size):
     await ctx.send(response)
 
 
+@bot.command(name="numbers")
+async def arrow(ctx, number):
+   
+    for i in range(number):
+        await ctx.send(i)
+
+
+
+
+
+
 
 @bot.event
 async def on_message(message):
