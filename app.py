@@ -43,6 +43,13 @@ async def arrow(ctx, size):
     await ctx.send(response)
 
 
+@bot.command(name="nevo")
+async def arrow(ctx):
+    response = "You got "  + str(random.randint(1,1000))+ " nevo coins"
+
+    await ctx.send(response)
+
+
 @bot.event
 async def on_message(message):
     username = message.author.mention
