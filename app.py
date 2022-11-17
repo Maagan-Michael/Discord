@@ -43,21 +43,9 @@ async def arrow(ctx, size):
     await ctx.send(response)
 
 
-@bot.command(name="numbers")
-async def arrow(ctx, number):
-   
-    for i in range(number):
-        await ctx.send(i)
-
-
-
-
-
-
-
 @bot.event
 async def on_message(message):
-    username = str(message.author).split("#")[0]
+    username = message.author.mention
     user_message = str(message.content)
     chanel = str(message.channel.name)
     print(user_message)
@@ -68,6 +56,7 @@ async def on_message(message):
         return
 
     if message.channel.name == "general":
+
         if user_message.lower() == "hello":
             await message.channel.send(f"hello {username}")
             return
