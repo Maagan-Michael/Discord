@@ -3,6 +3,7 @@ import discord
 from discord.ext import commands
 
 import random
+import send_email
 import music
 
 TOKEN = getenv("TOKEN")
@@ -55,6 +56,13 @@ async def arrow(ctx):
     ls = ["Itay", "Nevo", "Yonatan K.", "Yuval" ,"Bonti", "kami"]
     response = random.choice(ls)
     await ctx.send(response)
+
+
+@bot.command(name="email")
+async def arrow(ctx, to_email,subject, message):
+    send_email(to_email,subject,message)
+    await ctx.send("email has been sent to " + to_email)
+    
 
 
 
