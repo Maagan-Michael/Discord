@@ -59,8 +59,9 @@ async def arrow(ctx):
 
 
 @bot.command(name="email")
-async def arrow(ctx, to_email,subject, message):
-    send_email(to_email,subject,message)
+async def arrow(ctx, to_email, subject, message):
+
+    send_email.send_mail(to_email,subject,message)
     await ctx.send("email has been sent to " + to_email)
     
 
