@@ -29,6 +29,12 @@ bot = commands.Bot(command_prefix="!", intents=intents)
 async def on_ready():
     print("we have logged in as {0.user}".format(bot))
 
+@bot.command(name="dog")
+async def random_dog_pic(ctx):
+    response = requests.get("https://dog.ceo/api/breeds/image/random")
+    image_link = response.json()["message"]
+    await ctx.send(image_link)
+
 
 
 exec(open("./functions/common_functions.py").read())
