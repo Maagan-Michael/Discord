@@ -31,11 +31,9 @@ async def on_ready():
 
 
 
-@bot.command(name="nevo coins")
-async def arrow(ctx):
-    response = "You got "  + str(random.randint(1,1000))+ " nevo coins"
+exec(open("./functions/on_message.py").read())
 
-    await ctx.send(response)
+
 
 
 
