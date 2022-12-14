@@ -1,6 +1,8 @@
 from app import bot
 import random
 import requests
+import time
+
 
 
 
@@ -37,3 +39,20 @@ async def random_dog_pic(ctx):
     response = requests.get("https://dog.ceo/api/breeds/image/random")
     image_link = response.json()["message"]
     await ctx.send(image_link)
+
+
+@bot.command(name="bomb")
+async def bomb(ctx, num):
+        x = int(num)
+
+        while True:
+            await ctx.send(x)
+            x-= 1
+            time.sleep(1)
+            if x == 0:
+            
+                break
+            elif x < 0:
+                break
+        ctx.send("boom!!!!!!!!!!")
+    
