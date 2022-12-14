@@ -32,6 +32,7 @@ async def on_ready():
 
 
 exec(open("./functions/on_message.py").read())
+exec(open("./functions/common_functions.py").read())
 
 
 

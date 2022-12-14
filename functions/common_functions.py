@@ -17,7 +17,7 @@ async def arrow(ctx, size):
 
 
 
-@bot.command(name="nevo coins")
+@bot.command(name="nevo_coins")
 async def arrow(ctx):
     response = "You got "  + str(random.randint(1,1000))+ " nevo coins"
 
