@@ -6,9 +6,7 @@ async def on_message(message):
     username = message.author.mention
     user_message = str(message.content)
     chanel = str(message.channel.name)
-    print(user_message)
-    print(username)
-    print(chanel)
+
 
     if message.author == bot.user:
         return
