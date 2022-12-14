@@ -41,6 +41,11 @@ async def random_dog_pic(ctx):
     await ctx.send(image_link)
 
 
+@bot.command(name="zebra")
+async def random_dog_pic(ctx):
+    await ctx.send("https://media.tenor.com/_BQfXFMQVtkAAAAC/zebra-zebras.gif")
+
+
 @bot.command(name="bomb")
 async def bomb(ctx, num):
         x = int(num)
