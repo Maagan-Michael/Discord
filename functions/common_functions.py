@@ -54,5 +54,5 @@ async def bomb(ctx, num):
                 break
             elif x < 0:
                 break
-        await ctx.send("boom!!!!!!!!!!")
+        await ctx.send(f"https://www.google.com/url?sa=i&url=https%3A%2F%2Ftenor.com%2Fsearch%2Fexplosion-gifs&psig=AOvVaw3GMLJ-EpP-nYKnudNmQuVJ&ust=1671126539263000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCMCmpdDV-fsCFQAAAAAdAAAAABAE")
     
