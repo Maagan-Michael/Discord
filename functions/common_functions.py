@@ -54,5 +54,5 @@ async def bomb(ctx, num):
                 break
             elif x < 0:
                 break
-        ctx.send("boom!!!!!!!!!!")
+        await ctx.send("boom!!!!!!!!!!")
     
