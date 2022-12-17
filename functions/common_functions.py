@@ -46,11 +46,16 @@ async def random_dog_pic(ctx):
     await ctx.send("https://media.tenor.com/_BQfXFMQVtkAAAAC/zebra-zebras.gif")
 
 
-@bot.command(name="pic")
+@bot.command(name="kids")
 async def random_dog_pic(ctx, name):
     if name == "קלק":
         await ctx.send("https://ibasketball.co.il/wp-content/uploads/2020/10/S106561-103x128.jpg")
+    
+    elif name=="נבו":
+        await ctx.send("https://ibasketball.co.il/wp-content/uploads/2020/10/S106575-747x1024.jpg")
 
+    elif name=="קלק":
+        await ctx.send("https://ibasketball.co.il/wp-content/uploads/2020/10/S106561-103x128.jpg")
 
 @bot.command(name="bomb")
 async def bomb(ctx, num):
