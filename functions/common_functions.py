@@ -46,6 +46,12 @@ async def random_dog_pic(ctx):
     await ctx.send("https://media.tenor.com/_BQfXFMQVtkAAAAC/zebra-zebras.gif")
 
 
+@bot.command(name="pic")
+async def random_dog_pic(ctx, name):
+    if name == "קלק":
+        await ctx.send("https://ibasketball.co.il/wp-content/uploads/2020/10/S106561-103x128.jpg")
+
+
 @bot.command(name="bomb")
 async def bomb(ctx, num):
         x = int(num)
