@@ -59,8 +59,11 @@ async def random_dog_pic(ctx, name):
     elif name=="נבו":
         await ctx.send("https://ibasketball.co.il/wp-content/uploads/2020/10/S106575-747x1024.jpg")
 
+    elif name=="עמית":
+        await ctx.send("https://firebasestorage.googleapis.com/v0/b/mm-discord.appspot.com/o/unknown.png?alt=media&token=ffb3e02d-342f-41cd-9b12-97cf3cdb258a")
 
-
+    elif name=="איתי":
+        await ctx.send("https://firebasestorage.googleapis.com/v0/b/mm-discord.appspot.com/o/20220626_004533.jpg?alt=media&token=b7799622-289b-42db-93a3-2f0836e8a5b0")
 @bot.command(name="bomb")
 async def bomb(ctx, num):
         x = int(num)
@@ -82,4 +85,8 @@ async def barkan(ctx, name):
     if name == "barkan":
         await ctx.send("https://cdn.discordapp.com/attachments/1024725516667867196/1054403616263376906/IMG_0640.png")
 
+
+# @bot.command(name="give")
+# async def barkan(ctx, name):
+#     if name == "barkan":
 
