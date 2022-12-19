@@ -74,3 +74,10 @@ async def bomb(ctx, num):
                 break
         await ctx.send(f"https://media.tenor.com/-g-Um3DDvV0AAAAC/explosion.gif")
     
+
+@bot.command(name="gal")
+async def barkan(ctx, name):
+    if name == "barkan":
+        await ctx.send("https://cdn.discordapp.com/attachments/1024725516667867196/1054403616263376906/IMG_0640.png%22")
+
+
