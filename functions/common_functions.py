@@ -43,6 +43,7 @@ async def button(ctx):
     b1 = Button(label="תן לי כלב", style=discord.ButtonStyle.blurple)
     async def button_callback(interaction):
         await interaction.response.send_message(image_link)
+        await interaction.response.edit_message(content="got your dog", view = None)
     b1.callback = button_callback
     view = View()
     view.add_item(b1)
