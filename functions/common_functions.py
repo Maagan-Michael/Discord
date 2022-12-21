@@ -36,11 +36,11 @@ async def random_name(ctx):
     await ctx.send(response)
 
 
-@bot.command(name="tesxt")
+@bot.command(name="dog")
 async def button(ctx):
     response = requests.get("https://dog.ceo/api/breeds/image/random")
     image_link = response.json()["message"]
-    b1 = Button(label="מלך", style=discord.ButtonStyle.blurple)
+    b1 = Button(label="תן לי כלב", style=discord.ButtonStyle.blurple)
     async def button_callback(interaction):
         await interaction.response.send_message(image_link)
     b1.callback = button_callback
