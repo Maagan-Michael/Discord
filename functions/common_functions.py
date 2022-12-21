@@ -48,7 +48,7 @@ async def button(ctx):
     view = View()
     view.add_item(b1)
 
-    await ctx.send("test", view=view)
+    await ctx.send("want a dog?", view=view)
 
 
 @bot.command(name="zebra")
