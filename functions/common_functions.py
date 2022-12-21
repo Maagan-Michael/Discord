@@ -2,6 +2,8 @@ from app import bot
 import random
 import requests
 import time
+import discord
+from discord.ui import Button,View
 
 
 
@@ -34,11 +36,18 @@ async def random_name(ctx):
     await ctx.send(response)
 
 
-@bot.command(name="dog")
-async def random_dog_pic(ctx):
+@bot.command(name="tesxt")
+async def button(ctx):
     response = requests.get("https://dog.ceo/api/breeds/image/random")
     image_link = response.json()["message"]
-    await ctx.send(image_link)
+    b1 = Button(label="מלך", style=discord.ButtonStyle.blurple)
+    async def button_callback(interaction):
+        await interaction.response.send_message(image_link)
+    b1.callback = button_callback
+    view = View()
+    view.add_item(b1)
+
+    await ctx.send("test", view=view)
 
 
 @bot.command(name="zebra")
@@ -90,7 +99,4 @@ async def barkan(ctx, name):
 async def barkan(ctx):
         await ctx.send(r"https://firebasestorage.googleapis.com/v0/b/mm-discord.appspot.com/o/WhatsApp%20Video%202022-11-05%20at%2016.52.18.mp4?alt=media&token=b150891c-e3f6-486d-909d-c96ce968fbda")
 
-# @bot.command(name="give")
-# async def barkan(ctx, name):
-#     if name == "barkan":
 
