@@ -51,6 +51,18 @@ async def button(ctx):
     await ctx.send("want a dog?", view=view)
 
 
+@bot.command(name="github")
+async def button(ctx):
+    
+    b1 = Button(label="MM-GitHub",url="https://github.com/Maagan-Michael")
+
+    view = View()
+    view.add_item(b1)
+
+    await ctx.send("פה זה פגז", view=view)
+
+
+
 @bot.command(name="zebra")
 async def random_dog_pic(ctx):
     await ctx.send("https://media.tenor.com/_BQfXFMQVtkAAAAC/zebra-zebras.gif")
