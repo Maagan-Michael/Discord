@@ -23,7 +23,9 @@ def check_result(choice1, choice2):
 @bot.command(name="rps")
 async def rock_paper_scissors(ctx):
 
-    user_id = str(ctx.author)
+    user_mention = ctx.author.mention
+    user_id = ctx.author.id
+    print(user_id)
     bot_choice = random.choice(["rock", "paper", "scissors"])
 
     async def process_result(result):
@@ -33,7 +35,7 @@ async def rock_paper_scissors(ctx):
             await ctx.send("its a tie! both players picked " + result[1])
         
         elif result[0] == 1:
-            await ctx.send(user_id+" you won!!")
+            await ctx.send(f"{user_mention} you won!!")
 
         elif result[0] == 2:
             await ctx.send("better luck next time...")
