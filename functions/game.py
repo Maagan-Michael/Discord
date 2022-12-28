@@ -96,4 +96,4 @@ async def game(ctx):
     view.add_item(buy_button)
     view.add_item(sell_button)
 
-    await ctx.send(f"Here is your account details {user_mention} :\n Smekels: {user_data['shmekels']}\n Gems: {user_data['gems']} \n Stars: {user_data['stars']} \n\n You can buy a Gem for 50 Shmekels\nYou can sell a Gem for 25 Shmekels", view=view)
+    await ctx.send(f"Here is your account details {user_mention} :\n Smekels: {user_data['shmekels']}\n Gems: {user_data['gems']} \n Stars: {user_data['stars']} \n\n You can buy a Gem for 25 Shmekels\nYou can sell a Gem for 10 Shmekels", view=view)
