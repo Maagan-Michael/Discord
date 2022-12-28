@@ -26,6 +26,7 @@ async def buy_gem(user_id):
     shmekels = user_data["shmekels"]
     if shmekels >= 25:
         user_data["shmekels"] = user_data["shmekels"] - 25
+        user_data["gems"] = user_data["gems"] + 1
         requests.patch(url,json=user_data)
         return True
     else:
@@ -38,6 +39,8 @@ async def sell_gem(user_id):
     gems = user_data["gems"]
     if gems > 0:
         user_data["gems"] = user_data["gems"] - 1
+        user_data["shmekels"] = user_data["shmekels"] + 10
+
         requests.patch(url,json=user_data)
         return True
     else:
