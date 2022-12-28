@@ -34,6 +34,7 @@ async def on_ready():
 
 exec(open("./functions/common_functions.py").read())
 exec(open("./functions/rock_paper_scissors.py").read())
+exec(open("./functions/game.py").read())
 exec(open("./functions/on_message.py").read())
 
 
