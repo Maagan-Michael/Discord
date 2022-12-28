@@ -4,7 +4,24 @@ import requests
 import time
 import discord
 from discord.ui import Button,View
-from game import get_shmekels
+
+async def check_user_data(user_id):
+    url = f"https://mm-discord-default-rtdb.europe-west1.firebasedatabase.app/users/{user_id}.json"
+    response = requests.get(url)
+    user_data = response.json()
+    if user_data == None:
+        #creates user
+        user_data = {"stars":0, "shmekels": 0, "gems": 0}
+        requests.patch(url,json=user_data)
+
+    return user_data
+
+async def get_shmekels(user_id, amount):
+    url = f"https://mm-discord-default-rtdb.europe-west1.firebasedatabase.app/users/{user_id}.json"
+    user_data = await check_user_data(user_id)
+
+    user_data["shmekels"] = user_data["shmekels"] + amount
+    requests.patch(url,json=user_data)
 
 
 def check_result(choice1, choice2):

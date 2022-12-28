@@ -44,12 +44,7 @@ async def sell_gem(user_id):
         return False
 
 
-async def get_shmekels(user_id, amount):
-    url = f"https://mm-discord-default-rtdb.europe-west1.firebasedatabase.app/users/{user_id}.json"
-    user_data = await check_user_data(user_id)
 
-    user_data["shmekels"] = user_data["shmekels"] + amount
-    requests.patch(url,json=user_data)
 
    
 
