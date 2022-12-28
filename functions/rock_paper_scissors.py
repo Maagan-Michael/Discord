@@ -32,10 +32,10 @@ async def rock_paper_scissors(ctx):
         if result[0] == 0:
             await ctx.send("its a tie! both players picked " + result[1])
         
-        elif result == 1:
+        elif result[0] == 1:
             await ctx.send(user_id+" you won!!")
 
-        elif result == 2:
+        elif result[0] == 2:
             await ctx.send("better luck next time...")
 
         
