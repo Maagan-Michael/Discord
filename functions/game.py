@@ -33,8 +33,8 @@ async def buy_gem(user_id):
 
 async def sell_gem(user_id):
     url = f"https://mm-discord-default-rtdb.europe-west1.firebasedatabase.app/users/{user_id}.json"
-    response = requests.get(url)
-    user_data = response.json()
+
+    user_data = check_user_data(user_id)
     gems = user_data["gems"]
     if gems > 0:
         user_data["gems"] = user_data["gems"] - 1
@@ -43,6 +43,15 @@ async def sell_gem(user_id):
     else:
         return False
 
+
+async def get_shmekels(user_id, amount):
+    url = f"https://mm-discord-default-rtdb.europe-west1.firebasedatabase.app/users/{user_id}.json"
+    user_data = check_user_data(user_id)
+
+    user_data["shmekels"] = user_data["shmekels"] + amount
+    requests.patch(url,json=user_data)
+
+   
 
 
 @bot.command(name="game")

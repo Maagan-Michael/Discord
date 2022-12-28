@@ -4,6 +4,7 @@ import requests
 import time
 import discord
 from discord.ui import Button,View
+from game import get_shmekels
 
 
 def check_result(choice1, choice2):
@@ -35,7 +36,8 @@ async def rock_paper_scissors(ctx):
             await ctx.send("its a tie! both players picked " + result[1])
         
         elif result[0] == 1:
-            await ctx.send(f"{user_mention} you won!!")
+            get_shmekels(user_id=user_id,amount=5)
+            await ctx.send(f"{user_mention} you won!!\n\n heres 5 Shmekels, enjoy!")
 
         elif result[0] == 2:
             await ctx.send("better luck next time...")
