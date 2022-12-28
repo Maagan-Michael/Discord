@@ -48,17 +48,17 @@ async def rock_paper_scissors(ctx):
     async def on_rock(interaction):
         await interaction.response.edit_message(content="choice: rock" , view = None)
         result = check_result("rock", bot_choice)
-        process_result(result)
+        await process_result(result)
 
     async def on_paper(interaction):
         await interaction.response.edit_message(content="choice: paper" , view = None)
         result = check_result("paper", bot_choice)
-        process_result(result)
+        await process_result(result)
 
     async def on_scissors(interaction):
         await interaction.response.edit_message(content="choice:  scissors" , view = None)
         result = check_result("scissors", bot_choice)
-        process_result(result)
+        await process_result(result)
 
     rock_button.callback = on_rock
     paper_button.callback = on_paper
