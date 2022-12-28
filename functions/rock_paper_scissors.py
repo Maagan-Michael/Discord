@@ -53,7 +53,7 @@ async def rock_paper_scissors(ctx):
             await ctx.send("its a tie! both players picked " + result[1])
         
         elif result[0] == 1:
-            get_shmekels(user_id=user_id,amount=5)
+            await get_shmekels(user_id=user_id,amount=5)
             await ctx.send(f"{user_mention} you won!!\n\n heres 5 Shmekels, enjoy!")
 
         elif result[0] == 2:
