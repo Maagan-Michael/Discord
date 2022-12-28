@@ -21,7 +21,7 @@ async def check_user_data(user_id):
 
 async def buy_gem(user_id):
     url = f"https://mm-discord-default-rtdb.europe-west1.firebasedatabase.app/users/{user_id}.json"
-    response = await requests.get(url)
+    response = requests.get(url)
     user_data = response.json()
     shmekels = user_data["shmekels"]
     if shmekels >= 25:
@@ -71,18 +71,18 @@ async def game(ctx):
         result = await buy_gem(user_id)
 
         if result == True:
-            await ctx.send(content=f"{user_mention} bought a Gem!" )
+            await interaction.response.send_message(content=f"{user_mention} bought a Gem!" )
         else: 
-            await ctx.send(content=f"{user_mention} you dont have enough Shmekels to buy a Gem!" )
+            await interaction.response.send_message(content=f"{user_mention} you dont have enough Shmekels to buy a Gem!" )
             
 
 
     async def sell_star(interaction):
         result = await sell_gem(user_id)
         if result == True:
-            await ctx.send(content=f"{user_mention} sold a Gem!" )
+            await interaction.response.send_message(content=f"{user_mention} sold a Gem!" )
         else: 
-            await ctx.send(content=f"{user_mention} you dont have any Gems!" )
+            await interaction.response.send_message(content=f"{user_mention} you dont have any Gems!" )
    
 
    
