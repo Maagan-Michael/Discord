@@ -71,18 +71,18 @@ async def game(ctx):
         result = await buy_gem(user_id)
 
         if result == True:
-            await interaction.response.send_message(content=f"{user_mention} bought a Gem!" )
+            await ctx.send(content=f"{user_mention} bought a Gem!" )
         else: 
-            await interaction.response.send_message(content=f"{user_mention} you dont have enough Shmekels to buy a Gem!" )
+            await ctx.send(content=f"{user_mention} you dont have enough Shmekels to buy a Gem!" )
             
 
 
     async def sell_star(interaction):
         result = await sell_gem(user_id)
         if result == True:
-            await interaction.response.send_message(content=f"{user_mention} sold a Gem!" )
+            await ctx.send(content=f"{user_mention} sold a Gem!" )
         else: 
-            await interaction.response.send_message(content=f"{user_mention} you dont have any Gems!" )
+            await ctx.send(content=f"{user_mention} you dont have any Gems!" )
    
 
    
