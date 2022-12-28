@@ -23,7 +23,7 @@ def check_result(choice1, choice2):
 @bot.command(name="rps")
 async def rock_paper_scissors(ctx):
 
-    user_id = ctx.author
+    user_id = str(ctx.author)
     bot_choice = random.choice(["rock", "paper", "scissors"])
 
     async def process_result(result):
