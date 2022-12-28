@@ -41,9 +41,9 @@ async def rock_paper_scissors(ctx):
         
 
 
-    rock_button = Button(label="Rock")
-    paper_button = Button(label="Paper")
-    scissors_button = Button(label="Scissors")
+    rock_button = Button(label="Rock",style=discord.ButtonStyle.primary)
+    paper_button = Button(label="Paper",style=discord.ButtonStyle.danger)
+    scissors_button = Button(label="Scissors",style=discord.ButtonStyle.success)
 
     async def on_rock(interaction):
         await interaction.response.edit_message(content="choice: rock" , view = None)
@@ -65,8 +65,8 @@ async def rock_paper_scissors(ctx):
     scissors_button.callback = on_scissors
 
     view = View()
-    view.add_item(rock_button,discord.ButtonStyle.primary)
-    view.add_item(paper_button,discord.ButtonStyle.danger)
-    view.add_item(scissors_button,discord.ButtonStyle.success)
+    view.add_item(rock_button)
+    view.add_item(paper_button)
+    view.add_item(scissors_button)
 
     await ctx.send("lets see if you can win", view=view)
