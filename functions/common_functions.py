@@ -86,6 +86,7 @@ async def random_dog_pic(ctx, name):
 
     elif name=="איתי":
         await ctx.send("https://firebasestorage.googleapis.com/v0/b/mm-discord.appspot.com/o/20220626_004533.jpg?alt=media&token=b7799622-289b-42db-93a3-2f0836e8a5b0")
+
 @bot.command(name="bomb")
 async def bomb(ctx, num):
         x = int(num)
@@ -108,8 +109,20 @@ async def barkan(ctx, name):
         await ctx.send("https://cdn.discordapp.com/attachments/1024725516667867196/1054403616263376906/IMG_0640.png")
 
 
+
 @bot.command(name="superS")
 async def barkan(ctx):
         await ctx.send(r"https://firebasestorage.googleapis.com/v0/b/mm-discord.appspot.com/o/WhatsApp%20Video%202022-11-05%20at%2016.52.18.mp4?alt=media&token=b150891c-e3f6-486d-909d-c96ce968fbda")
 
+@bot.command(name="minecraft")
+async def barkan(ctx, user):
+    url = "https://bwstats.shivam.pro/user/"+user
+
+
+    response = requests.get(url)
+    user_data = str(response.content).lower()
+    data_list = user_data.split("<td>")
+    data_list.pop(0)
+
+    await ctx.send(user +" played " +str(data_list[1])+ " games" )
 
