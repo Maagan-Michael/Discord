@@ -1,3 +1,4 @@
+import os
 from os import getenv
 import discord
 from discord.ext import commands
@@ -6,7 +7,7 @@ from functions.common_functions import *
 import random
 
 
-TOKEN = getenv("TOKEN")
+TOKEN = os.environ['BOT_TOKEN']
 
 intents = discord.Intents.all()
 intents.dm_messages = True
